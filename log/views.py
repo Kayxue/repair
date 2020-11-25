@@ -24,12 +24,11 @@ class LogView(DetailView):
 
 
 class LogCreate(CreateView):
-    model = LogItem
-    # 新增時只顯示需填寫的部份欄位
-    fields = ['subject', 'description', 'reporter', 'phone']
+  model = LogItem
+  fields = ['subject', 'description', 'reporter', 'phone', 'picture']
 
-    def get_success_url(self):
-        return reverse('log_list')
+  def get_success_url(self):
+    return reverse('log_list')
 
 # 回覆維修進度
 
